@@ -1,5 +1,4 @@
-
-void swap2Numbers(int*, int*);
+#include "common.h"
 
 void swap2Numbers(int *a, int*b){
     int temp = *a;

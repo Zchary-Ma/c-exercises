@@ -1,5 +1,5 @@
-int max(int, int);
+#include "math.h"
 
-int max(int m, int n){
+int Max(int m, int n){
     return  m > n ? m : n;
 }

@@ -14,6 +14,7 @@ By default, gcc and clang are pretty quiet about compilation warnings and errors
 4. use `static` to make external variables private to source file.static can apply both to global (to the compilation unit) variables,functions, and function-local variables.
 5. Typedefs `typedef` can be used to create type aliases.
 6. can declare pointers to structs (`struct rectangle *my_rec_ptr = &my_rec;`).
+7. headers usually includes `#define`, `struct`, `typedef` and function prototype.
 
 ## reference
 

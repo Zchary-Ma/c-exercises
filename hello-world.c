@@ -3,12 +3,14 @@
 void log_size_of(void);
 void log_arr_size(int *);
 void log_weird(void);
+void log_macros(void);
 
 int main(){
-    int arr1[] = {0};
-    log_arr_size(arr1);
-    log_size_of();
-    log_weird();
+    // int arr1[] = {0};
+    // log_arr_size(arr1);
+    // log_size_of();
+    // log_weird();
+    log_macros();
 }
 
 void log_size_of(void){
@@ -33,5 +35,8 @@ void log_weird(){
     printf("%d \n", arr2[1]); // 65 
     printf("%d \n", arr2[2]); // -330787248
     printf("%d \n", 2==3); // 0
-    printf("%d \n", isActive);
+}
+
+void log_macros(){
+    printf("%s",__TIME__);
 }
