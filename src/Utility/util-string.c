@@ -1,7 +1,5 @@
 #include <string.h>
-#include <stdio.h>
-
-void str_reverse(char *);
+#include "util-string.h"
 
 void str_reverse(char *str_input){
     char temp = '0';
@@ -11,11 +9,4 @@ void str_reverse(char *str_input){
         str_input[i] = str_input[str_len - 1 - i];
         str_input[str_len - 1 - i] = temp;
     }
-}
-
-int main(){
-    char str[]="Mudane life";
-    str_reverse(str);
-    printf("%s\n",str);
-    return 0;
 }
