@@ -16,6 +16,14 @@ By default, gcc and clang are pretty quiet about compilation warnings and errors
 6. can declare pointers to structs (`struct rectangle *my_rec_ptr = &my_rec;`).
 7. headers usually includes `#define`, `struct`, `typedef` and function prototype.
 
+## Q&A
+
+> 1. permmision denied while executing built file
+
+solution: `chmod -R 777 ./build`
+
 ## reference
 
 1. [learn x in y minutes](https://learnxinyminutes.com/docs/c/)
+2. [makefile](https://makefiletutorial.com)
+3. [GenericMakefile](https://github.com/mbcrawfo/GenericMakefile)
