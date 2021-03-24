@@ -15,6 +15,7 @@ By default, gcc and clang are pretty quiet about compilation warnings and errors
 5. Typedefs `typedef` can be used to create type aliases.
 6. can declare pointers to structs (`struct rectangle *my_rec_ptr = &my_rec;`).
 7. headers usually includes `#define`, `struct`, `typedef` and function prototype.
+8. string is char array ends with `'\0'`
 
 ## Q&A
 
@@ -27,3 +28,4 @@ solution: `chmod -R 777 ./build`
 1. [learn x in y minutes](https://learnxinyminutes.com/docs/c/)
 2. [makefile](https://makefiletutorial.com)
 3. [GenericMakefile](https://github.com/mbcrawfo/GenericMakefile)
+4. [how-write-good-c-main-function](https://opensource.com/article/19/5/how-write-good-c-main-function)
