@@ -56,3 +56,6 @@ build/
 bin/
 .DS_Store
 .release_time
+
+
+src/training

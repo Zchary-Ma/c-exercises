@@ -1,4 +1,3 @@
-/* main.c - the complete listing */
 #include <string.h>
 #include <math.h>
 #include <stdio.h>
