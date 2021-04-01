@@ -7,6 +7,6 @@
 
 int fibonacci_common(int num);
 
-int fibonacci_recursion(int num);
+int fibonacci_recursive(int num);
 
 #endif //C_FIBONACCI_H
