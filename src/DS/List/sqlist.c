@@ -1,4 +1,5 @@
 #include "sqlist.h"
+#include "../typedef.h"
 #include "../../Enums/common.h"
 #include <stdlib.h>
 

@@ -5,6 +5,7 @@
 #define LIST_INCREMENT 10
 
 #include "../../Enums/common.h"
+#include "../typedef.h"
 
 // 静态顺序表 存储空间长度固定 (以下操作实现均以动态顺序表为准)
 typedef struct {
@@ -14,7 +15,6 @@ typedef struct {
 
 
 // 动态顺序表 分配动态空间
-typedef char elemType;
 typdef struct {
     elementType *elem;
     int length; // 顺序表长度
