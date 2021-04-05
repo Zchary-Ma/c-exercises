@@ -1,1 +1,1 @@
-void printIntArray(int*, int);
+void printIntArray(int *, int);

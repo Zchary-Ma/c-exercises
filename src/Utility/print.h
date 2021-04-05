@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "print.h"
 
 void printIntArray(int *arr, size_t size) {
     for (int i = 0; i < size; i++) {
