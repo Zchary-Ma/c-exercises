@@ -7,8 +7,10 @@
 
 #include "../typedef.h"
 
-typedef struct {
+typedef struct Node {
+    elemType elem;
+    struct Node *next;
+} Node, *NodePtr;
 
-
-} Node;
+typedef NodePtr LinklistPtr // 二重指针
 #endif //C_NODE_H

@@ -1,5 +1,27 @@
 # c learning
 
+## repo description
+
+```
+.
+├── README.md
+├── a.out  // default gcc compiled file
+├── main.bak.c 
+├── makefile
+├── makefile.bak //  awesome makefile from online 
+├── package.json
+└── src
+    ├── 840 // post-graduate entrance examination 840 code
+    ├── Algorithms 
+    ├── DS // basic data-struture implementation
+    ├── Enums // enums
+    ├── Utility // utility function
+    ├── class 
+    ├── examples // example code from online resource or book
+    └── main.c // entrance (might be deleted in future)
+    
+```
+
 ## About compiler flags
 
 By default, gcc and clang are pretty quiet about compilation warnings and errors, which can be very useful information.
