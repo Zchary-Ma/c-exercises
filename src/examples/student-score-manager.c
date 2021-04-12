@@ -4,12 +4,13 @@
 
 #define MAX_SIZE 10
 
-void *cal(int *scores, int *nums, int count, int *result);
+void *cal(int *scores, int *nums, int count, int *pMaxScore, int *pMaxScoreNum);
 
 int main() {
     int nums[MAX_SIZE]; // 学号数组
     int scores[MAX_SIZE]; // 分数数组
     int count = 0;
+    int maxScore, maxScoreNum;
     printf("----Welcome------\n");
     printf("how many student?:(less than 11) \n");
     scanf("%d", &count);
@@ -20,19 +21,20 @@ int main() {
             printf("please input score ' ' num\n");
             scanf("%d %d", &scores[i], &nums[i]);
         }
-        int result[2] = {0, 0};
-        cal(scores, nums, count, result);
-        printf("the max score is : %d\n", result[0]);
-        printf("the student num is : %d\n", result[1]);
+        cal(scores, nums, count, &maxScore, &maxScoreNum);
+        printf("the max score is : %d\n", maxScore);
+        printf("the student num is : %d\n", maxScoreNum);
     }
     return 0;
 }
 
-void *cal(int *scores, int *nums, int count, int *result) {
+void *cal(int *scores, int *nums, int count, int *pMaxScore, int *pMaxScoreNum) {
+    *pMaxScore = scores[0];
+    *pMaxScoreNum = nums[0];
     for (int i = 0; i < count; ++i) {
-        if (result[0] < scores[i]) {
-            result[0] = scores[i];
-            result[1] = nums[i];
+        if (*pMaxScore < scores[i]) {
+            *pMaxScore = scores[i];
+            *pMaxScoreNum = nums[i];
         }
     }
 }
