@@ -1,9 +1,4 @@
 typedef enum {
-    false,
-    true
-} bool;
-
-typedef enum {
     success,
     fail,
     error_common, // common error

@@ -1,4 +1,4 @@
-void Swap2Numbers(int *, int *);
+void Swap(int *, int *);
 
 /**
  * is leap year or not.

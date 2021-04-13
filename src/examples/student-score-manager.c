@@ -4,7 +4,17 @@
 
 #define MAX_SIZE 10
 
-void *cal(int *scores, int *nums, int count, int *pMaxScore, int *pMaxScoreNum);
+#include "../Enums/common.h"
+#include "../Utility/common.h"
+
+status cal(int *scores, int *nums, int count, int *pMaxScore, int *pMaxScoreNum);
+
+status PrintScore(int score[], int n);
+
+status ReadScore(int score[], int *pCount);
+
+status SortingScore(int score[], int n, int isAscending);
+
 
 int main() {
     int nums[MAX_SIZE]; // 学号数组
@@ -12,23 +22,17 @@ int main() {
     int count = 0;
     int maxScore, maxScoreNum;
     printf("----Welcome------\n");
-    printf("how many student?:(less than 11) \n");
-    scanf("%d", &count);
-    if (count <= 0 || count > MAX_SIZE) {
-        printf("input error\n");
-    } else {
-        for (int i = 0; i < count; ++i) {
-            printf("please input score ' ' num\n");
-            scanf("%d %d", &scores[i], &nums[i]);
-        }
-        cal(scores, nums, count, &maxScore, &maxScoreNum);
-        printf("the max score is : %d\n", maxScore);
-        printf("the student num is : %d\n", maxScoreNum);
-    }
+    ReadScore(scores, &count);
+    printf("the original data items are:\n");
+    PrintScore(scores, count);
+    SortingScore(scores, count, 1);
+    printf("sorted items are:\n");
+    PrintScore(scores, count);
     return 0;
 }
 
-void *cal(int *scores, int *nums, int count, int *pMaxScore, int *pMaxScoreNum) {
+status cal(int *scores, int *nums, int count, int *pMaxScore, int *pMaxScoreNum) {
+    status s = success;
     *pMaxScore = scores[0];
     *pMaxScoreNum = nums[0];
     for (int i = 0; i < count; ++i) {
@@ -37,4 +41,56 @@ void *cal(int *scores, int *nums, int count, int *pMaxScore, int *pMaxScoreNum) 
             *pMaxScoreNum = nums[i];
         }
     }
+    return s;
 }
+
+status PrintScore(int score[], int n) {
+    status s = fail;
+    if (score && n > 0) {
+        s = success;
+    }
+    for (int i = 0; i < n; ++i) {
+        printf("%d ", score[i]);
+    }
+    printf("\n");
+    return s;
+}
+
+status ReadScore(int score[], int *pCount) {
+    status s = success;
+    int i = 0;
+    printf("Input Score:");
+    while (scanf(" %d", &score[i]) == 1) {
+        printf("Input Score:");
+        i++;
+    }
+    // NOTE put EOF to end while loop
+    *pCount = i;
+    if (i > 10000) {
+        s = fail;
+    }
+    return s;
+}
+
+
+status SortingScore(int score[], int n, int isAscending) {
+    status s = fail;
+    // bubble sort
+    for (int i = 0; i < n; ++i) {
+        for (int j = i; j < n - i - 1; ++j) {
+            // ascending
+            if (isAscending > 0) {
+                if (score[j] < score[j + 1]) {
+                    Swap(&score[j], &score[j + 1]);
+                }
+            } else {
+                if (score[j] > score[j + 1]) {
+                    Swap(&score[j], &score[j + 1]);
+                }
+            }
+            // descending
+        }
+    }
+    return s;
+}
+
